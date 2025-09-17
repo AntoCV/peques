@@ -1,0 +1,326 @@
+        /* --- VARIABLES Y ESTILOS GLOBALES --- */
+        :root {
+            --brand-pink: #E85A9B;
+            --brand-light-pink: #FCE8F2;
+            --background-color: #FEFBF6;
+            --text-color: #333;
+            --gray-text: #6b7280;
+            --white: #ffffff;
+            --font-body: 'Poppins', sans-serif;
+            --font-heading: 'Pacifico', cursive;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* --- NAVEGACIÓN --- */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4rem;
+        }
+
+        .nav-brand {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--brand-pink);
+        }
+        
+        .nav-links {
+            display: none; /* Oculto en móviles */
+        }
+
+        .nav-links a {
+            color: var(--gray-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--brand-pink);
+        }
+
+        /* --- SECCIÓN PRINCIPAL (HERO) --- */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background-color: var(--brand-light-pink);
+        }
+
+        .hero-logo {
+            width: 12rem;
+            height: 12rem;
+            margin: 0 auto 1.5rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 4px solid var(--white);
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--brand-pink);
+            margin-bottom: 1rem;
+            font-weight: 400; /* Fuente más ligera */
+        }
+        
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-text);
+            max-width: 42rem;
+            margin: 0 auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 2rem;
+            background-color: var(--brand-pink);
+            color: var(--white);
+            font-weight: bold;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-size: 1.125rem;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            background-color: #d94a8b;
+        }
+
+        /* --- SECCIONES GENÉRICAS --- */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            text-align: center;
+            color: var(--brand-pink);
+            margin-bottom: 3rem;
+            font-weight: 400; /* Fuente más ligera */
+        }
+
+        /* --- MENÚ DE POSTRES --- */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .dessert-card {
+            background-color: var(--white);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .dessert-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .dessert-card img {
+            width: 100%;
+            height: 16rem;
+            object-fit: cover;
+        }
+
+        .dessert-card-content {
+            padding: 1.5rem;
+        }
+
+        .dessert-card-content h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .dessert-card-content p {
+            color: var(--gray-text);
+            margin: 0;
+        }
+
+        /* --- SECCIÓN CÓMO PEDIR --- */
+        #pedir {
+            background-color: var(--white);
+            border-radius: 1rem;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .how-to-order-steps {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .step-number {
+            background-color: var(--brand-pink);
+            color: var(--white);
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .step h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            max-width: 18rem;
+            color: var(--gray-text);
+        }
+
+        .step-arrow {
+            display: none;
+            color: #d1d5db;
+            font-size: 2rem;
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            background-color: var(--brand-light-pink);
+            margin-top: 4rem;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--brand-pink);
+            margin-bottom: 1rem;
+            font-weight: 400; /* Fuente más ligera */
+        }
+        
+        .footer-text {
+            color: var(--gray-text);
+            margin-bottom: 2rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-button {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--white);
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        
+        .contact-button:hover {
+            transform: scale(1.05);
+        }
+
+        .whatsapp-btn { background-color: #25D366; }
+        .whatsapp-btn:hover { background-color: #1DAE54; }
+
+        .facebook-btn { background-color: #1877F2; }
+        .facebook-btn:hover { background-color: #125DBA; }
+
+        .contact-button i {
+            font-size: 1.5rem;
+        }
+        
+        .footer-copy {
+            color: #9ca3af;
+            margin-top: 3rem;
+            font-size: 0.875rem;
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (min-width: 640px) { /* sm */
+            .nav-links {
+                display: flex;
+                gap: 2rem;
+            }
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 768px) { /* md */
+            .hero-logo {
+                width: 14rem;
+                height: 14rem;
+            }
+            .hero-title {
+                font-size: 3.75rem;
+            }
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+            .how-to-order-steps {
+                flex-direction: row;
+                gap: 3rem;
+            }
+            .step-arrow {
+                display: block;
+            }
+        }
+
+        @media (min-width: 1024px) { /* lg */
+            .menu-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
