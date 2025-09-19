@@ -3,7 +3,7 @@
         const menuItems = [
             {
                 name: "Chocoflan",
-                description: "La combinación perfecta de pastel de chocolate húmedo y flan cremoso, bañado en cajeta.",
+                description: "La combinación perfecta de pastel de chocolate húmedo y flan cremoso, bañado con caramelo.",
                 image: "img/postres/chocoflan.jpg"
             },
             {
@@ -60,3 +60,4 @@
                 });
             });
         });
+
